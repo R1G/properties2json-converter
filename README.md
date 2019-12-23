@@ -15,6 +15,26 @@ We convert the sample.properties file provided here
 We convert the sample_locales directory (which contains several .properties files) here
 >`python properties2json.py sample_locales locales_converted`
 
+# features
+properties2json-converter is non-destructive, and able to convert .properties files containing multiple '=' characters and special characters, making it ideal for .properties files containing hyperlinks, nested objects, etc.
+
+>`some_link=<a href='/signin'>Log in</a>`
+Converts to
+>`"some_link"="<a href='/signin'>Log in"</a>`
+
+>`objectA.objectB[objectC]=value`
+Converts to
+>`{
+    "A": {
+        "B": {
+            "C": "1"
+        }
+    }
+}`
+
+
+
+
 
 
 
