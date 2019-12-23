@@ -12,4 +12,9 @@ To copy a directory containing .properties files to .json
 We convert the sample.properties file provided here
 >`python properties2json.py sample.properties`
 
+We convert the sample_locales directory (which contains several .properties files) here
+>`python properties2json.py sample_locales locales_converted`
+
+
+
 
