@@ -1,5 +1,5 @@
 # properties2json-converter
-Simple Python utility for converting .properties files and directories to .json. Supports nesting, multi-dimensional arrays, etc.
+Simple Python utility for converting .properties files and directories to .json. 
 
 # usage
 To copy a .properties file to a .json file
