@@ -25,10 +25,15 @@ Converts to
 >`objectA.objectB[objectC]=value`
 Converts to
 >`
+
 "A": {
+
 ....."B": {
+
 .........."C": "value"
+
 .....}
+
 }`
 
 
