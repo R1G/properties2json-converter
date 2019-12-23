@@ -8,7 +8,7 @@ To copy a .properties file to a .json file
 To copy a directory containing .properties files to .json
 >`python properties2json.py <SRC> <DEST>`
 
-#examples
+# examples
 We convert the sample.properties file provided here
 >`python properties2json.py sample.properties`
 
