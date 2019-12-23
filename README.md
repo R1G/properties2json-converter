@@ -18,11 +18,18 @@ We convert the sample_locales directory (which contains several .properties file
 # features
 properties2json-converter is non-destructive, and able to convert .properties files containing multiple '=' characters and special characters, making it ideal for .properties files containing hyperlinks, nested objects, etc.
 
-```java some_link=<a href='/signin'>Log in</a>```
+```java 
+some_link=<a href='/signin'>Log in</a>
+```
 Converts to
-```yaml "{some_link":"<a href='/signin'>Log in"</a>}```
+```yaml 
+"{some_link":"<a href='/signin'>Log in"</a>}
+```
 
->```java objectA.objectB[objectC]=value```
+```java 
+objectA.objectB[objectC]=value
+```
+
 Converts to
 ```yaml
 {
@@ -31,7 +38,8 @@ Converts to
       "C": "value"
     }
   }
-}```
+}
+```
 
 
 
