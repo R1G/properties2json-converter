@@ -48,8 +48,7 @@ def convert(folderPath, outputPath):
     return;
 
 def main():
-    usage = "To convert a file: python properties2json.py <FILE NAME>.properties \
-             To convert folder: python properties2json.py <SRC> <DEST>\n"
+    usage = "\nTo convert a file: python properties2json.py <FILE NAME>.properties \nTo convert folder: python properties2json.py <SRC> <DEST>\n"
 
     if(len(sys.argv)<2 or len(sys.argv)>3):
         print(usage);
