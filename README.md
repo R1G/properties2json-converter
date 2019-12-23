@@ -28,8 +28,9 @@ Converts to
 ```
 
 ### nested objects
+Observe that [] and . notation may be used interchangeably through any depth.
 ```java 
-objectA.objectB[objectC]=value
+A.B[C]=value
 ```
 
 Converts to
