@@ -32,7 +32,6 @@ Observe that [] and . notation may be used interchangeably through any depth.
 ```java 
 A.B[C]=value
 ```
-
 Converts to
 ```yaml
 {
@@ -41,6 +40,20 @@ Converts to
       "C": "value"
     }
   }
+}
+```
+
+### encoding
+We write to JSON's default `utf-8` encoding.
+```java
+country=中国
+greeting=你好
+```
+Converts to
+```yaml
+{
+    "name": "中国", 
+    "greeting": "你好"
 }
 ```
 
