@@ -19,7 +19,8 @@ def prop2json(inputPath):
         equalIndex = line.find("=");
         if(equalIndex==-1): raise NameError(line);
         
-        match = re.split(r'\[|\.|\]\=', line[0: equalIndex+1], 1);
+        line = line.strip("]").replace("[", "."); #Converting [] syntax to . for ease of parsing
+        match = re.split(r'\.', line[0: equalIndex+1], 1);
         level = objects;
         oName = line[0:equalIndex];
         subName = line[0:equalIndex];
