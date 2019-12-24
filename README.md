@@ -52,7 +52,7 @@ greeting=你好
 Converts to
 ```yaml
 {
-    "name": "中国", 
+    "country": "中国", 
     "greeting": "你好"
 }
 ```
