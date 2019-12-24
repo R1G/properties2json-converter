@@ -3,17 +3,17 @@ import json;
 import shutil
 import re;
 import sys;
+import codecs
 
 #given a valid <your file>.properties, produces <your file>.json in the same folder
 def prop2json(inputPath):
     if(".properties"!=inputPath[-11:]): raise NameError("invalid filename");
     
     inputText = open(inputPath).read();
-    output = open(inputPath.replace(".properties", ".json"), "w+");
+    #output = open(inputPath.replace(".properties", ".json"), "w+");
     lines = inputText.split("\n");
     objects = {}; #we store every entry as key-value pair within objects
-
-    output.write("{");
+    
     for line in lines:
         if(len(line)==0 or line[0]=='#' or line[0]=='!'): continue; #skipping comments
         equalIndex = line.find("=");
@@ -28,13 +28,17 @@ def prop2json(inputPath):
             oName = match[0];
             subName = match[1];
             if(oName not in level): level[oName] = {};
-            match = re.split(r'\[|\.|\]\=', subName, 1);
+            match = re.split(r'\.', subName, 1);
             level = level[oName];
-        level[subName.strip("[].=")] = line[equalIndex+1:];
+        level[subName.strip("[].=")] = line[equalIndex+1:];   
 
-    output.write(json.dumps(objects, indent=4)[1:-1]);    
-    output.write("}");
-    output.close();
+    with codecs.open(inputPath.replace(".properties", ".json"), 'w+', encoding='utf8') as output: #preserves utf8 input
+        output.write("{");
+        data = json.dumps(objects, ensure_ascii=False, indent=4, encoding='utf8')[1:-1];
+        output.write(unicode(data))
+        output.write("}");
+        output.close();
+
     return;
 
 #recursively produces clone of .properties directories as .json 
