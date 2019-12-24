@@ -16,7 +16,7 @@ We convert the sample_locales directory (which contains several .properties file
 >`python properties2json.py sample_locales locales_converted`
 
 # features
-properties2json-converter is non-destructive, and able to convert .properties files containing multiple '=' characters and special characters, making it ideal for .properties files containing hyperlinks, nested objects, etc.
+properties2json-converter is non-destructive, and able to convert .properties files containing multiple '=' characters, nesting and special characters, making it ideal for localization files. 
 
 ### equals sign
 ```java 
