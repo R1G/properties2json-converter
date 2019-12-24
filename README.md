@@ -24,7 +24,7 @@ some_link=<a href='/signin'>Log in</a>
 ```
 Converts to
 ```yaml 
-"{some_link":"<a href='/signin'>Log in"</a>}
+"{some_link":"<a href='/signin'>Log in</a>}"
 ```
 
 ### nested objects
