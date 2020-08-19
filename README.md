@@ -56,7 +56,8 @@ Converts to
     "greeting": "你好"
 }
 ```
-
+### object literal
+Substitute `properties2json` with `properties2js` to convert to .js files containing object literals instead. 
 
 
 
